@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+
+{% block content %} 
+<div class="container">
+    <h2 class="my-4">Add To-Do</h2>
+    <form method="post" action="/todo/create">
+        <div class="mb-3">
+            <label class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Description</label>
+            <textarea name="description" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" name="done" class="form-check-input" id="completed">
+            <label class="form-check-label" for="completed">Mark as Done</label>
+        </div>
+        <button type="submit" class="btn btn-success">✔ Add To-Do</button>
+    </form>
+</div>
+{% endblock %}
